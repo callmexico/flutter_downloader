@@ -275,8 +275,7 @@ public class FlutterDownloaderPlugin implements MethodCallHandler, FlutterPlugin
                 String saveFilePath = task.savedDir + File.separator + task.filename;
         File partialFile = new File(saveFilePath);
         if (partialFile.exists()) {
-            isResume = true;
-            log("exists file for "+ filename + "automatic resuming...");
+            log("exists file for "+ task.filename + "automatic resuming...");
             WorkRequest request = buildRequest(task.url, task.savedDir, task.filename, task.headers, task.showNotification, task.openFileFromNotification, true, requiresStorageNotLow);
                 
         }else{
